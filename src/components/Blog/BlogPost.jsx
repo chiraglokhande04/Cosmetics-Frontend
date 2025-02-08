@@ -1,11 +1,11 @@
-import Image from "next/image";
+
 
 const BlogPost = ({ image, date, title, description, categories }) => {
   return (
     <div className="flex bg-white shadow-md rounded-lg overflow-hidden mb-6">
       {/* Blog Image */}
       <div className="relative w-1/3">
-        <Image src={image} alt={title} className="w-full h-full object-cover" />
+        <img src={image} alt={title} className="w-full h-full object-cover" />
         <span className="absolute top-2 left-2 bg-black text-white text-xs px-3 py-1">
           {date}
         </span>

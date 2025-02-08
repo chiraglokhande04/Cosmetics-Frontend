@@ -1,5 +1,6 @@
 import React from "react";
 import { FiSearch, FiUser, FiHeart, FiShoppingBag } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -8,18 +9,18 @@ const LandingPage = () => {
       <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-5 text-white z-10">
         <h1 className="text-2xl font-bold tracking-wide">LUCHIANA</h1>
         <ul className="hidden md:flex gap-8 text-lg">
-          <li className="hover:opacity-75 cursor-pointer">HOME</li>
-          <li className="hover:opacity-75 cursor-pointer">SHOP</li>
-          <li className="hover:opacity-75 cursor-pointer">HEADERS</li>
-          <li className="hover:opacity-75 cursor-pointer">BLOG</li>
-          <li className="hover:opacity-75 cursor-pointer">PAGES</li>
-          <li className="hover:opacity-75 cursor-pointer">MEGA</li>
-          <li className="hover:opacity-75 cursor-pointer">CONTACT</li>
+          <Link to='/' className="hover:opacity-75 cursor-pointer">HOME</Link>
+          <Link to='/shop' className="hover:opacity-75 cursor-pointer">SHOP</Link>
+          <Link to='/headers' className="hover:opacity-75 cursor-pointer">HEADERS</Link>
+          <Link to='/blog' className="hover:opacity-75 cursor-pointer">BLOG</Link>
+          <Link to='/pages' className="hover:opacity-75 cursor-pointer">PAGES</Link>
+          <Link to='/mega' className="hover:opacity-75 cursor-pointer">MEGA</Link>
+          <Link to='/contact' className="hover:opacity-75 cursor-pointer">CONTACT</Link>
         </ul>
         <div className="flex gap-4 text-xl">
           <FiSearch className="cursor-pointer hover:opacity-75" />
           <FiUser className="cursor-pointer hover:opacity-75" />
-          <FiHeart className="cursor-pointer hover:opacity-75" />
+          <Link to='/wishlist'> <FiHeart className="cursor-pointer hover:opacity-75" /></Link>
           <FiShoppingBag className="cursor-pointer hover:opacity-75" />
         </div>
       </nav>
@@ -57,7 +58,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-     
+
     </div>
   );
 };

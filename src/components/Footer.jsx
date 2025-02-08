@@ -1,7 +1,7 @@
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { IoLocationOutline, IoMailOutline, IoTimeOutline, IoCallOutline } from "react-icons/io5";
 
-export default function ShopFooter() {
+export default function Footer() {
   return (
     <footer className="bg-black text-white p-10 relative">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
