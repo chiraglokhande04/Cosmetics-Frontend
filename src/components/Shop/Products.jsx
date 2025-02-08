@@ -31,7 +31,7 @@ const products = [
 
 export default function ShopProducts() {
   return (
-    <div className="w-3/4 p-6">
+    <div className="w-[1000px] p-6 bg-white">
       {/* Sorting and Results */}
       <div className="flex justify-between items-center mb-4">
         <p className="text-gray-600">SHOWING 1–12 OF 21 RESULTS</p>
@@ -43,7 +43,7 @@ export default function ShopProducts() {
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-3 gap-6 bg-white">
         {products.map((product) => (
           <div key={product.id} className="border p-4 relative">
             {product.discount && (

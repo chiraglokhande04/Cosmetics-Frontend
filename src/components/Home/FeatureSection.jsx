@@ -10,9 +10,9 @@ const FeatureSection = () => {
   ];
 
   return (
-    <div className="bg-gray-100 py-12 flex flex-col items-center">
-      <h2 className="text-2xl font-semibold mb-8">We Love & We Support</h2>
-      <div className="flex justify-center gap-12">
+    <div className="my-20 bg-gray-100 py-12 flex flex-col items-center">
+      <h2 className="text-2xl font-semibold mb-14">We Love & We Support</h2>
+      <div className="flex justify-center gap-40">
         {features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center">
             <div className="text-black">{feature.icon}</div>

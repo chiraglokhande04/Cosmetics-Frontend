@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ShopSidebar() {
   return (
-    <aside className="w-1/4 p-6 border-r">
+    <aside className="w-1/4 m-2  p-6 border border-black bg-white">
       {/* Categories */}
       <div className="mb-6">
         <h2 className="font-bold text-lg">CATEGORIES</h2>

@@ -4,7 +4,7 @@ import Products from './Products'
 
 const Layout = () => {
   return (
-    <div className='flex'>
+    <div className='mt-10 flex flex-row gap-x-60'>
         <ShopSidebar/>
         <Products/>
     </div>

@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 const ShopPage = () => {
   return (
-    <div>
+    <div className="bg-gray-100">
         <PageHeader title={'Shop'} bgColor={'#029352'}/>
         <Layout/>
         <Footer/>

@@ -40,8 +40,8 @@ const PageHeader = ({ title, bgColor = "#D6C4B5" }) => {
 
       {/* Dynamic Page Title */}
       <div className="text-center mt-10">
-        <h2 className="text-4xl font-light uppercase tracking-widest">{title}</h2>
-        <p className="text-sm mt-2 text-gray-600">Home &gt; {title}</p>
+        <h2 className="text-4xl my-20  font-light uppercase tracking-widest">{title}</h2>
+        <p className="text-sm mt-9 text-gray-600">Home &gt; {title}</p>
       </div>
     </div>
   );
