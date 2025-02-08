@@ -31,14 +31,16 @@ const LandingPage = () => {
         <div
           className="relative w-full md:w-1/2 h-1/2 md:h-full bg-cover bg-center flex items-end p-10"
           style={{
-            backgroundImage: "url('https://www.shutterstock.com/image-photo/close-young-woman-clear-glowing-600nw-2147868781.jpg')",
+            backgroundImage: "url('https://i.pinimg.com/736x/14/f0/33/14f033ca25e1e6e585b346c8851997a8.jpg')",
           }}
         >
           <div className="text-white">
             <h1 className="text-4xl font-bold mb-4">Modern Formula for Skin Health</h1>
-            <button className="px-6 py-3 text-lg text-black hover:text-white bg-yellow-300 hover:bg-yellow-600 transition rounded-md">
+            <Link to='/shop'>
+            <button className="px-6 py-3  text-black hover:text-white bg-yellow-300 hover:bg-yellow-600 transition ">
               SHOP NOW
             </button>
+            </Link>
           </div>
         </div>
 
@@ -46,14 +48,16 @@ const LandingPage = () => {
         <div
           className="relative w-full md:w-1/2 h-1/2 md:h-full bg-cover bg-center flex  p-10"
           style={{
-            backgroundImage: "url('https://sadhev.com/cdn/shop/articles/Aloe-Vera.jpg?v=1732616276')",
+            backgroundImage: "url('https://images.pexels.com/photos/9748713/pexels-photo-9748713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
           }}
         >
           <div className="text-white mt-20">
             <h1 className="text-4xl font-bold mb-4">Natural & Organic Skincare Set</h1>
-            <button className="px-6 py-3 text-lg text-black hover:text-white bg-yellow-300 hover:bg-yellow-600 transition rounded-md">
+            <Link to='/shop'>
+            <button className="px-6 py-3  text-black hover:text-white bg-yellow-300 hover:bg-yellow-600 transition ">
               SHOP NOW
             </button>
+            </Link>
           </div>
         </div>
       </div>
