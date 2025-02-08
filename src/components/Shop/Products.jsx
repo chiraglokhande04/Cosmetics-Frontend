@@ -1,37 +1,44 @@
 import React from "react";
+import ProductCard from "../ProductCard";
 
 const products = [
   {
     id: 1,
     name: "AIRBRUSH MATTE",
-    description: "Skin-perfecting bronzed filter for the face.",
+    desc: "Skin-perfecting bronzed filter for the face.",
     price: 40,
     oldPrice: 45,
-    image: "/product1.png",
+    img: "https://elevation45.in/wp-content/uploads/2020/10/luchiana-3022279061.jpg",
     discount: "-11%",
     featured: true,
+    rating: 4,
+    showOnHover: true,
   },
   {
     id: 2,
     name: "BODIFYING SHAMPOO",
-    description: "A gentle but thorough cleanser that leaves hair.",
+    desc: "A gentle but thorough cleanser that leaves hair.",
     price: 45,
-    image: "/product2.png",
+    img: "https://i0.wp.com/elevation45.in/wp-content/uploads/2020/10/luchiana-3015865450.jpg?fit=1200%2C1200&ssl=1&w=640",
     new: true,
+    rating: 4,
+    showOnHover: true,
   },
   {
     id: 3,
     name: "BRIGHTENING CORRECTOR",
-    description: "A full-coverage color corrector.",
+    desc: "A full-coverage color corrector.",
     price: 80,
-    image: "/product3.png",
+    img: "https://www.rasluxuryoils.com/cdn/shop/files/35ml_1f1896e0-5e26-4470-a677-a57963ce58c5_533x.jpg?v=1735985502",
     new: true,
+    rating: 4,
+    showOnHover: true,
   },
 ];
 
 export default function ShopProducts() {
   return (
-    <div className="w-[1000px] p-6 bg-white">
+    <div className="w-3/4 p-6 bg-gray-100">
       {/* Sorting and Results */}
       <div className="flex justify-between items-center mb-4">
         <p className="text-gray-600">SHOWING 1–12 OF 21 RESULTS</p>
@@ -43,36 +50,9 @@ export default function ShopProducts() {
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-3 gap-6 bg-white">
+      <div className="grid grid-cols-3 gap-6 bg-gray-100">
         {products.map((product) => (
-          <div key={product.id} className="border p-4 relative">
-            {product.discount && (
-              <span className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1">
-                {product.discount}
-              </span>
-            )}
-            {product.featured && (
-              <span className="absolute top-2 right-2 bg-pink-300 text-white text-xs px-2 py-1">
-                FEATURED
-              </span>
-            )}
-            {product.new && (
-              <span className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1">
-                NEW
-              </span>
-            )}
-            <img src={product.image} alt={product.name} className="mb-4" />
-            <h3 className="text-lg font-bold">{product.name}</h3>
-            <p className="text-gray-600 text-sm">{product.description}</p>
-            <div className="mt-2">
-              {product.oldPrice && (
-                <span className="line-through text-gray-500 mr-2">
-                  ${product.oldPrice}
-                </span>
-              )}
-              <span className="text-black font-bold">${product.price}</span>
-            </div>
-          </div>
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </div>

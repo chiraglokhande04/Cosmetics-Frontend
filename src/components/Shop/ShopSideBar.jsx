@@ -1,8 +1,10 @@
 import React from "react";
 
 export default function ShopSidebar() {
+
+  const brands = ["Aerin", "Fable&Mane", "Loreal", "Mac", "Schwarzkopf"];
   return (
-    <aside className="w-1/4 m-2  p-6 border border-black bg-white">
+    <aside className="w-1/4  p-6 border border-black bg-white">
       {/* Categories */}
       <div className="mb-6">
         <h2 className="font-bold text-lg">CATEGORIES</h2>
@@ -40,6 +42,18 @@ export default function ShopSidebar() {
           <button className="border px-3 py-1 text-sm">50 mL</button>
         </div>
       </div>
+
+      <div className="p-4">
+      <h2 className="text-lg font-bold mb-3">BRAND</h2>
+      <div className="space-y-2">
+        {brands.map((brand, index) => (
+          <label key={index} className="flex items-center space-x-2">
+            <input type="checkbox" className="form-checkbox text-black" />
+            <span className="text-gray-700">{brand}</span>
+          </label>
+        ))}
+      </div>
+    </div>
     </aside>
   );
 }
