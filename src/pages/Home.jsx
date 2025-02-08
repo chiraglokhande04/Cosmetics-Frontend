@@ -8,6 +8,7 @@ import FeatureSection from '../components/Home/FeatureSection'
 import BeforeAfterSlider from '../components/Home/BeforeAfterSlider'
 import TeamSection from '../components/Home/TeamSection'
 import BottomHero from '../components/Home/BottomHero'
+import Footer from '../components/Home/Footer'  
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
         <BeforeAfterSlider/>
         <TeamSection/>
         <BottomHero/>
+        <Footer/>
     </div>
   )
 }

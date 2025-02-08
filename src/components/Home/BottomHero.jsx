@@ -6,7 +6,7 @@ export default function BottomHero() {
       {/* Left Section - Organic Shower Gels */}
       <div className="relative">
         <img
-          src="/images/shower-gel.jpg" // Replace with actual image path
+          src="https://i.pinimg.com/736x/14/f0/33/14f033ca25e1e6e585b346c8851997a8.jpg" // Replace with actual image path
           alt="Organic Shower Gels"
           className="w-full h-full object-cover"
         />
@@ -21,7 +21,7 @@ export default function BottomHero() {
       {/* Right Section - Dermatology Testing */}
       <div className="relative">
         <img
-          src="/images/microscope.jpg" // Replace with actual image path
+          src="https://media.istockphoto.com/id/1357956420/photo/cute-lady-using-cosmetic-product-in-studio.jpg?s=612x612&w=0&k=20&c=Z5YIgH1Wv1zjOrJwjvtnQIGlitN3EGHMuKkiUXZqrUU=" // Replace with actual image path
           alt="Dermatology Testing"
           className="w-full h-full object-cover"
         />
