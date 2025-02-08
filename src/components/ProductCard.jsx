@@ -26,18 +26,18 @@ const ProductCard = ({ product }) => {
             className="w-full h-auto object-cover transition-all duration-300"
           />
           {product.showOnHover && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100">
+            <div className="absolute -bottom-28 inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100">
               <div className="flex bg-white mb-2">
-                <div className="p-3 border border-black">
-                  <FaRegEye className="text-gray-600 text-lg cursor-pointer" />
+                <div className="p-3 border text-gray-600  border-black hover:bg-black hover:text-white transition ">
+                  <FaRegEye className="text-lg cursor-pointer " />
                 </div>
-                <div className="p-3 border border-black">
-                  <FaRegHeart className="text-gray-600 text-lg cursor-pointer" />
+                <div className="p-3 border  text-gray-600  border-black hover:bg-black hover:text-white transition">
+                  <FaRegHeart className="text-gray-600 text-lg cursor-pointer hover:bg-black hover:text-white transition " />
                 </div>
               </div>
-              <button className="border bg-white border-black px-4 py-1 text-black">
+              <button className="w-full h-14 border bg-white border-black px-4 py-1 text-black hover:bg-black hover:text-white transition">
                 + ADD TO CART
-              </button>
+              </button> 
             </div>
           )}
         </div>

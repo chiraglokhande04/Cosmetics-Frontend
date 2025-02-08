@@ -1,9 +1,22 @@
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { IoLocationOutline, IoMailOutline, IoTimeOutline, IoCallOutline } from "react-icons/io5";
+import Link from "react-router-dom";
 
 export default function Footer() {
   return (
     <footer className="bg-black text-white p-10 relative">
+
+      <div>
+        <Link to='/about'><span>ABOUT US</span></Link>
+        <span></span>
+        <Link to='/team'><span>Our team</span></Link>
+        <span></span>
+        <Link to='/faq'><span>FAQ</span></Link>
+        <span></span>
+        <Link to='/maintenance'><span>Maintenance mode</span></Link>
+        <span></span>
+        <Link to='/contact'><span>Contact</span></Link>
+      </div>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Contact Info */}
         <div className="space-y-2">

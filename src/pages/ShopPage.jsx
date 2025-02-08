@@ -1,5 +1,5 @@
 import React from 'react'
-import ShopHero from '../components/Shop/ShopHero'
+
 import Layout from '../components/Shop/Layout'
 import PageHeader from '../components/PageHeader'
 import Footer from '../components/Footer'
