@@ -28,12 +28,14 @@ const PageHeader = ({ title, bgColor = "#D6C4B5" }) => {
         <div className="flex space-x-4 items-center">
           <Search className="w-5 h-5 cursor-pointer" />
           <User className="w-5 h-5 cursor-pointer" />
-          <div className="relative">
+          <Link to='/wishlist' className="cursor-pointer">
+          <div className="relative">    
             <Heart className="w-5 h-5 cursor-pointer" />
             <span className="absolute -top-2 -right-2 bg-white text-black text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
               1
             </span>
           </div>
+          </Link>
           <ShoppingBag className="w-5 h-5 cursor-pointer" />
         </div>
       </div>

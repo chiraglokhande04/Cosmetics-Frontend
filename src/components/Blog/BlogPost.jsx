@@ -2,7 +2,7 @@
 
 const BlogPost = ({ image, date, title, description, categories }) => {
   return (
-    <div className="flex bg-white shadow-md rounded-lg overflow-hidden mb-6">
+    <div className="h-80 flex bg-white shadow-md rounded-lg overflow-hidden mb-6">
       {/* Blog Image */}
       <div className="relative w-1/3">
         <img src={image} alt={title} className="w-full h-full object-cover" />

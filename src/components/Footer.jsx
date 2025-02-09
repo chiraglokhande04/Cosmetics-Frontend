@@ -1,23 +1,23 @@
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { IoLocationOutline, IoMailOutline, IoTimeOutline, IoCallOutline } from "react-icons/io5";
-import Link from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white p-10 relative">
+    <footer className="px-20 bg-black text-white p-10 relative">
 
-      <div>
-        <Link to='/about'><span>ABOUT US</span></Link>
-        <span></span>
-        <Link to='/team'><span>Our team</span></Link>
-        <span></span>
-        <Link to='/faq'><span>FAQ</span></Link>
-        <span></span>
-        <Link to='/maintenance'><span>Maintenance mode</span></Link>
-        <span></span>
-        <Link to='/contact'><span>Contact</span></Link>
+      <div className="mb-20 flex justify-center gap-4 ">
+        <Link to='/about' className="hover:text-yellow-200"><span>ABOUT US</span></Link>
+        <span>·</span>
+        <Link to='/team' className="hover:text-yellow-200"><span>Our team</span></Link>
+        <span>·</span>
+        <Link to='/faq' className="hover:text-yellow-200"><span>FAQ</span></Link>
+        <span>·</span>
+        <Link to='/maintenance' className="hover:text-yellow-200"><span>Maintenance mode</span></Link>
+        <span>·</span>
+        <Link to='/contact' className="hover:text-yellow-200"><span>Contact</span></Link>
       </div>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className=" max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Contact Info */}
         <div className="space-y-2">
           <p className="flex items-center gap-2"><IoCallOutline /> +123 488 9652</p>
@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
 
         {/* Center Branding & Socials */}
-        <div className="text-center">
+        <div className="text-center flex justify-center items-center flex-col">
           <h2 className="text-2xl font-bold tracking-widest">LUCHIANA</h2>
           <div className="flex justify-center gap-4 mt-4 text-lg">
             <FaFacebookF />
@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
 
         {/* Description */}
-        <div className="text-right">
+        <div className=" text-right text-gray-100">
           <p className="text-sm">Our formulas are made with natural, organic, and cruelty-free ingredients that are gentle, effective, and good for you and the environment.</p>
           <a href="#" className="block mt-2 text-sm underline">READ MORE</a>
         </div>
@@ -53,10 +53,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Buy Theme Button */}
-      <button className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-green-600 px-4 py-2 text-white font-bold rotate-90 rounded-t-lg">
-        Buy Theme
-      </button>
+   
     </footer>
   );
 }

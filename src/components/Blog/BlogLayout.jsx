@@ -3,11 +3,11 @@ import Sidebar from "./SideBar";
 
 export default function BlogLayout() {
   return (
-    <div className="flex gap-6 p-10 bg-gray-100">
+    <div className="w-full p-10 px-32 flex gap-8  bg-gray-100">
       {/* Blog Section */}
       <div className="w-2/3">
         <BlogPost
-          image="/blog1.jpg"
+          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS77OArMgm9nJkWXm-bS78PBJ9nmZbWch2flA&s"
           date="OCTOBER 20, 2020"
           title="New Trends in 2020"
           description="As concerns about climate change continue to grow, the beauty industry is starting to take notice..."
@@ -23,7 +23,7 @@ export default function BlogLayout() {
       </div>
 
       {/* Sidebar Section */}
-      <div className="w-1/3">
+      <div className="">
         <Sidebar />
       </div>
     </div>

@@ -6,7 +6,7 @@ const ContactSection = () => {
   const position = [40.7528, -73.9816]; // New York coordinates
 
   return (
-    <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto bg-gray-100 shadow-md rounded-lg overflow-hidden">
+    <div className="m-20 flex flex-col lg:flex-row w-full max-w-6xl h-auto mx-auto bg-gray-100 shadow-md rounded-lg overflow-hidden">
       {/* Left Section */}
       <div className="w-full lg:w-1/2 p-8 bg-white">
         <h2 className="text-3xl font-bold uppercase mb-6">New York</h2>

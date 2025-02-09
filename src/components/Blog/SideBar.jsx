@@ -1,6 +1,6 @@
 const Sidebar = () => {
     return (
-      <div className="w-full bg-white shadow-md p-6 rounded-lg">
+      <div className=" w-96 bg-white shadow-md p-6 rounded-lg">
         {/* Categories */}
         <div className="mb-6">
           <h3 className="font-semibold text-lg mb-3">CATEGORIES</h3>
