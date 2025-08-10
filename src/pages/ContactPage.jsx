@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 const ContactPage = () => {
   return (
     <div className='bg-gray-100'>
-        <PageHeader title={'Contact'} bgColor={'#029352'}/>
+        <PageHeader title={'Contact'} bgColor={'#4F6A57'}/>
         <ContactSection/>
         <ContactForm/>
         <Footer/>

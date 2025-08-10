@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 const WishlistPage = () => {
   return (
     <div>
-         <PageHeader title='Wishlist' bgColor='#029352' />
+         <PageHeader title='Wishlist' bgColor='#E6E3DF' />
         <WishlistTable/>
         <Footer/>
     </div>
