@@ -1,70 +1,75 @@
-import React from "react";
-import { FiSearch, FiUser, FiHeart, FiShoppingBag } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import React from 'react';
+import HeroImg from '../../assets/hero.png'; // Adjust the path as necessary
+import titleImg from '../../assets/title.png'; // Adjust the path as necessary
 
-const LandingPage = () => {
+export default function MedafemHero() {
   return (
-    <div className="relative w-full h-screen">
-      {/* Navbar */}
-      <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-5 text-white z-10">
-        <h1 className="text-2xl font-bold tracking-wide">LUCHIANA</h1>
-        <ul className="hidden md:flex gap-8 text-lg">
-          <Link to='/' className="hover:opacity-75 cursor-pointer">HOME</Link>
-          <Link to='/shop' className="hover:opacity-75 cursor-pointer">SHOP</Link>
-          <Link to='/headers' className="hover:opacity-75 cursor-pointer">HEADERS</Link>
-          <Link to='/blog' className="hover:opacity-75 cursor-pointer">BLOG</Link>
-          <Link to='/pages' className="hover:opacity-75 cursor-pointer">PAGES</Link>
-          <Link to='/mega' className="hover:opacity-75 cursor-pointer">MEGA</Link>
-          <Link to='/contact' className="hover:opacity-75 cursor-pointer">CONTACT</Link>
-        </ul>
-        <div className="flex gap-4 text-xl">
-          <FiSearch className="cursor-pointer hover:opacity-75" />
-          <FiUser className="cursor-pointer hover:opacity-75" />
-          <Link to='/wishlist'> <FiHeart className="cursor-pointer hover:opacity-75" /></Link>
-          <FiShoppingBag className="cursor-pointer hover:opacity-75" />
+    <div className="relative h-screen bg-gray-100 overflow-hidden">
+      {/* Navigation */}
+      <nav className="h-[84.7px] relative z-20 flex justify-between items-center px-6 py-4 text-white">
+        <div className="flex items-center space-x-8">
+          <button className="text-sm font-light tracking-wider hover:opacity-80">
+            SHOP
+          </button>
+        </div>
+        
+        <div className="absolute left-1/2 transform -translate-x-1/2">
+          <div className="text-center">
+           <img src={titleImg} alt="Medafem Logo" className="h-12 w-auto" />
+          </div>
+        </div>
+        
+        <div className="flex items-center space-x-6">
+          <button className="text-sm font-light tracking-wider hover:opacity-80">
+            SEARCH
+          </button>
+          <button className="text-sm font-light tracking-wider hover:opacity-80">
+            LOG IN
+          </button>
+          <button className="text-sm font-light tracking-wider hover:opacity-80 bg-white text-black px-3 py-1">
+            BAG 00
+          </button>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <div className="flex flex-col md:flex-row h-screen">
-        {/* Left Side */}
-        <div
-          className="relative w-full md:w-1/2 h-1/2 md:h-full bg-cover bg-center flex items-end p-10"
-          style={{
-            backgroundImage: "url('https://i.pinimg.com/736x/14/f0/33/14f033ca25e1e6e585b346c8851997a8.jpg')",
-          }}
-        >
-          <div className="text-white">
-            <h1 className="text-4xl font-bold mb-4">Modern Formula for Skin Health</h1>
-            <Link to='/shop'>
-            <button className="px-6 py-3  text-black hover:text-white bg-yellow-300 hover:bg-yellow-600 transition ">
-              SHOP NOW
-            </button>
-            </Link>
-          </div>
+      {/* Background Image with Overlay */}
+     {/* Background Image with Overlay */}
+<div 
+  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage: `url(${HeroImg})`,
+    backgroundSize: 'cover',
+  }}
+>
+  {/* Geometric background pattern */}
+  <div className="absolute inset-0 opacity-10">
+    <div className="w-full h-full bg-gradient-to-br from-gray-300 via-gray-200 to-gray-400"></div>
+  </div>
+
+  {/* Shadow overlay */}
+  <div className="absolute inset-0 bg-black opacity-30"></div>
+</div>
+
+
+      {/* Main Content */}
+      <div className="relative bottom-36 z-10 flex items-end h-screen px-20">
+        <div className="w-1/2">
+          <h2 className="text-5xl font-light text-white leading-tight mb-8">
+            Natural & Organic<br />
+            Skincare Set
+          </h2>
+          
+          <button className="bg-[#69795A] bg-opacity-80 text-black px-8 py-3 text-sm font-light tracking-widest hover:bg-opacity-100 transition-all duration-300">
+            SHOP NOW
+          </button>
         </div>
 
-        {/* Right Side */}
-        <div
-          className="relative w-full md:w-1/2 h-1/2 md:h-full bg-cover bg-center flex  p-10"
-          style={{
-            backgroundImage: "url('https://images.pexels.com/photos/9748713/pexels-photo-9748713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
-          }}
-        >
-          <div className="text-white mt-20">
-            <h1 className="text-4xl font-bold mb-4">Natural & Organic Skincare Set</h1>
-            <Link to='/shop'>
-            <button className="px-6 py-3  text-black hover:text-white bg-yellow-300 hover:bg-yellow-600 transition ">
-              SHOP NOW
-            </button>
-            </Link>
-          </div>
-        </div>
+        {/* Product Image Area */}
+      
       </div>
 
-
+      {/* Bottom accent line */}
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
     </div>
   );
-};
-
-export default LandingPage;
+}
