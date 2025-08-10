@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'Bosch';
+    src: url('./assets/fonts/Bosch.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  

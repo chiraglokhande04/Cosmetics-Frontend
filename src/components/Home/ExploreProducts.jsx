@@ -53,9 +53,9 @@ const products = [
 
 const ExploreProducts = () => {
   return (
-    <div className="bg-gray-100 p-8">
+    <div className="p-8 px-36">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-semibold">Explore Our Products</h1>
+        <h1 className="text-6xl font-extralight">Explore Our Products</h1>
         <Link to="/shop">
           <button className="border border-black px-6 py-2 text-black hover:bg-black hover:text-white">
             VIEW ALL
@@ -63,7 +63,7 @@ const ExploreProducts = () => {
         </Link>
       </div>
 
-      <div className="px-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+      <div className="mt-14 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

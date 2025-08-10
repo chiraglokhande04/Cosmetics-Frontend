@@ -2,7 +2,7 @@ import { FaRegEye, FaRegHeart } from "react-icons/fa";
 
 const ProductCard = ({ product }) => {
     return (
-      <div className="h-[500px] w-[280px] relative bg-white shadow-md rounded-lg overflow-hidden p-6 group">
+      <div className="h-[498.5px] w-[260px] relative bg-white shadow-md rounded-lg overflow-hidden p-6 group">
         {product.discount && (
           <span className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded z-20">
             {product.discount}
@@ -45,8 +45,8 @@ const ProductCard = ({ product }) => {
         <hr className="border-gray-300 w-full my-2" />
   
         <div className="space-y-6 mt-2">
-          <h2 className="text-center text-lg font-semibold mt-2">{product.name}</h2>
-          <p className="text-center text-gray-600 text-sm">{product.desc}</p>
+          <h2 className="text-center text-xl font-light mt-2">{product.name}</h2>
+          <p className="text-center text-gray-400 text-sm font-light">{product.desc}</p>
           <div className="flex justify-center mt-2 text-yellow-500">
             {Array.from({ length: product.rating }, (_, index) => (
               <span key={index}>&#9733;</span>

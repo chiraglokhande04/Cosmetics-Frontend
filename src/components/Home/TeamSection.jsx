@@ -1,54 +1,46 @@
 import React from "react";
+import { FaInstagram } from "react-icons/fa";
 
 const teamMembers = [
   {
     name: "Kate Blanchet",
     role: "CEO of Brand",
-    image: "/images/kate.jpg", // Replace with actual image path
+    img: "https://via.placeholder.com/300x400/555555/FFFFFF", // dark grey
   },
   {
     name: "Mary Parkson",
     role: "Skincare Specialist",
-    image: "/images/mary.jpg", // Replace with actual image path
+    img: "https://via.placeholder.com/300x400/CFCFCF/FFFFFF", // light grey
   },
   {
     name: "Judy Johnson",
     role: "Makeup Master",
-    image: "/images/judy.jpg", // Replace with actual image path
+    img: "https://via.placeholder.com/300x400/CFCFCF/FFFFFF",
   },
   {
     name: "Marta North",
     role: "Doctor of Cosmetology",
-    image: "/images/marta.jpg", // Replace with actual image path
+    img: "https://via.placeholder.com/300x400/CFCFCF/FFFFFF",
   },
 ];
 
 export default function TeamSection() {
   return (
-    <section className="py-12 bg-gray-100 text-center">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8">
+    <section className="bg-gray-50 py-12">
+      <h2 className="text-center text-2xl font-normal mb-10">
         Our Professional Team
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
         {teamMembers.map((member, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg p-4">
+          <div key={index} className="flex flex-col items-center">
             <img
-              src={member.image}
+              src={member.img}
               alt={member.name}
-              className="w-full h-96 object-cover rounded-lg"
+              className="w-full h-96 object-cover"
             />
-            <h3 className="text-lg font-semibold text-gray-900 mt-4">
-              {member.name}
-            </h3>
-            <p className="text-gray-500">{member.role}</p>
-            <div className="mt-2 flex justify-center">
-              <a
-                href="#"
-                className="text-gray-800 hover:text-black text-xl"
-              >
-                ⬛ {/* Replace with an actual Instagram icon */}
-              </a>
-            </div>
+            <h3 className="mt-4 text-xl font-light">{member.name}</h3>
+            <p className="text-sm text-gray-600 font-light">{member.role}</p>
+            <FaInstagram className="mt-2 text-black text-lg" />
           </div>
         ))}
       </div>

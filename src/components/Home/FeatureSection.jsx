@@ -1,22 +1,37 @@
-import { FaLeaf } from "react-icons/fa";
-import { GiSpray, GiWaterDrop, GiDna1 } from "react-icons/gi";
+
+import icon1 from "../../assets/icon1.png"; // Adjust the path as necessary
+import icon2 from "../../assets/icon2.png"; // Adjust the path as necessary
+import icon3 from "../../assets/icon3.png"; // Adjust the path as necessary
+import icon4 from "../../assets/icon4.png"; // Adjust the path as necessary
 
 const FeatureSection = () => {
   const features = [
-    { icon: <GiSpray size={50} />, text: "Fragrance-Free" },
-    { icon: <FaLeaf size={50} />, text: "Vegan Suitable" },
-    { icon: <GiWaterDrop size={50} />, text: "Dermatologist Tested" },
-    { icon: <GiDna1 size={50} />, text: "Gentle Formula" },
+    { icon: icon1, text: "Sraddha",value:"(Trust)" },
+    { icon: icon2, text: "Ahimsa",value:"(Non-harm)" },
+    { icon: icon3, text: "Satya ",value:"(Truth)" },
+    { icon: icon4, text: "Seva",value:"(Service)" },
   ];
 
+  const fontLink = document.createElement('link');
+fontLink.href = 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap';
+fontLink.rel = 'stylesheet';
+if (!document.head.querySelector(`link[href="${fontLink.href}"]`)) {
+  document.head.appendChild(fontLink);
+}
+
   return (
-    <div className="my-20 bg-gray-100 py-12 flex flex-col items-center">
-      <h2 className="text-2xl font-semibold mb-14">We Love & We Support</h2>
+    <div className=" bg-white py-20 flex flex-col items-center">
+      <h2 className="text-[43px] font-light mb-14">We Love & We Support</h2>
       <div className="flex justify-center gap-40">
         {features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center">
-            <div className="text-black">{feature.icon}</div>
-            <p className="mt-2 text-lg">{feature.text}</p>
+            <img className="h-[99px] w-[100px]" src={feature.icon} />
+            <div className="mt-2 text-[16px] font-extralight w-[166.68px] text-center"
+             style={{
+              fontFamily: 'Myriad Pro, Source Sans Pro, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+            }}><div>{feature.text}</div>
+            <div>{feature.value}</div>
+            </div>
           </div>
         ))}
       </div>

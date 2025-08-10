@@ -1,28 +1,38 @@
 import React from "react";
+import Img from "../../assets/Rectangle.png"; // Adjust the path as necessary
 
 const RetinolSection = () => {
+
+  const fontLink = document.createElement('link');
+  fontLink.href = 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap';
+  fontLink.rel = 'stylesheet';
+  if (!document.head.querySelector(`link[href="${fontLink.href}"]`)) {
+    document.head.appendChild(fontLink);
+  }
+  
   return (
-    <div className="mt-20 flex flex-col md:flex-row bg-[#FFD699] h-[550px] p-8 md:p-12 items-center">
+    <div className="mt-20 flex flex-col md:flex-row bg-[#69795A] h-[649px]  items-center">
       {/* Text Section */}
-      <div className="md:w-1/2 p-6">
-        <h1 className="text-4xl md:text-5xl font-bold text-black leading-tight">
-          Retinol: Your Best Anti-Aging Friend
+      <div className="md:w-[592px] p-6 ml-36 ">
+        <h1 className="w-full text-4xl md:text-6xl text-white leading-tight"
+         style={{
+          fontFamily: 'Myriad Pro, Source Sans Pro, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+        }}>
+        A Saga of Medafem
         </h1>
-        <p className="text-gray-800 mt-4 text-lg">
-          Retinol lorem ipsum dolor sit amet consectetur. Aliquam turpis ipsum augue
-          varius scelerisque. Integer donec purus sit justo. Quisque enim risus vel
-          convallis congue.
+        <p className=" text-white mt-4 text-[16px] font-extralight">
+        Born from the ancient soils of Ayurveda and the restless spirit of modern womanhood, we exist to honor the womb, not as a “problem” but as the pulsating core of life. We are on a mission to help women reconnect with their bodies, understand their cycles, and embrace every phase of womanhood with confidence and care.
         </p>
-        <button className="mt-6 border border-black px-6 py-3 text-black font-semibold hover:bg-black hover:text-white transition">
+        <button className="underline mt-6 py-3 text-white d font-extralight transition">
           READ MORE
         </button>
       </div>
       {/* Image Section */}
-      <div className="md:w-1/2 ">
+      <div className=" h-full relative top-[24.48px] -right-28">
         <img
-          src="https://st5.depositphotos.com/62628780/65113/i/450/depositphotos_651138636-stock-photo-face-cream-skincare-woman-studio.jpg" 
+          src={Img}
           alt="Woman with skincare cream"
-          className="w-full h-auto object-cover"
+          className="w-[614px] h-[614px] object-cover"
         />
       </div>
     </div>

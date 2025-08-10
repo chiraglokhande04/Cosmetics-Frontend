@@ -10,19 +10,33 @@ import TeamSection from '../components/Home/TeamSection'
 import BottomHero from '../components/Home/BottomHero'
 import Footer from '../components/Home/Footer'  
 
+import bgImg from '../assets/bg.png' // Adjust the path as necessary
+
 const Home = () => {
   return (
-    <div className='bg-gray-100'>
-        <Hero/>
-        <Contact/>
-        <Info/>
-        <ExploreProducts/>
-        <RetinolSection/>
-        <FeatureSection/>
-        <BeforeAfterSlider/>
-        <TeamSection/>
-        <BottomHero/>
-        <Footer/>
+    <div className="bg-gray-100">
+      <Hero />
+
+      {/* Wrap Contact, Info and ExploreProducts in a div with background image */}
+      <div className="relative bg-cover bg-center" style={{ backgroundImage: `url(${bgImg})` }}>
+  {/* Overlay with opacity */}
+  <div className="absolute inset-0 bg-white opacity-95"></div>
+
+  {/* Content */}
+  <div className="relative">
+    <Contact />
+    <Info />
+    <ExploreProducts />
+  </div>
+</div>
+
+
+      <RetinolSection />
+      <FeatureSection />
+      <BeforeAfterSlider />
+      <TeamSection />
+      <BottomHero />
+      <Footer />
     </div>
   )
 }
