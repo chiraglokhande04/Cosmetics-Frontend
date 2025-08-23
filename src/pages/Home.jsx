@@ -14,7 +14,7 @@ import bgImg from '../assets/bg.png' // Adjust the path as necessary
 
 const Home = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 overflow-hidden">
       <Hero />
 
       {/* Wrap Contact, Info and ExploreProducts in a div with background image */}
